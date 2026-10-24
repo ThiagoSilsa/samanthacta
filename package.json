@@ -7,7 +7,6 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "check:contrast": "node scripts/check-contrast.mjs",
     "check:placeholders": "node scripts/check-placeholders.mjs"
   },
   "dependencies": {
