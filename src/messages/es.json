@@ -40,7 +40,7 @@
       "documents": "Documentos psicológicos y registro documental",
       "instruments": "Instrumentos psicométricos",
       "languages": "Inglés",
-      "spreadsheets": "Excel, planillas y Power BI",
+      "spreadsheets": "Excel, hojas de cálculo y Power BI",
       "canva": "Canva"
     },
     "experiences": {
@@ -58,128 +58,128 @@
   },
   "content": {
     "profile": {
-      "headline": "[ES] Estudante de Psicologia (10º período) na UFF Niterói, com experiência em neuropsicologia clínica, avaliação psicológica, gestão de pessoas e análise do comportamento.",
-      "greeting": "[ES] Olá! Meu nome é",
-      "welcome": "[ES] Fico animada com a sua presença!",
+      "headline": "Estudiante de Psicología (10.º semestre) en la UFF Niterói, con experiencia en neuropsicología clínica, evaluación psicológica, gestión de personas y análisis de la conducta.",
+      "greeting": "¡Hola! Mi nombre es",
+      "welcome": "¡Me alegra mucho tu visita!",
       "locationLine": "Maricá | Niterói"
     },
     "assessment": {
-      "title": "[ES] Como eu entendo a avaliação psicológica",
-      "body": "[ES] Eu defendo a avaliação psicológica integrada, combinando os seus pilares — entrevista, observação e aplicação de instrumentos psicológicos — com a escuta humanizada e voltada para a realidade sociocultural do avaliando.",
-      "closing": "[ES] Assim, eu entendo que nenhuma técnica isolada supera o acolhimento à singularidade de cada um."
+      "title": "Cómo entiendo la evaluación psicológica",
+      "body": "Defiendo la evaluación psicológica integrada, combinando sus pilares —entrevista, observación y aplicación de instrumentos psicológicos— con una escucha humanizada y orientada a la realidad sociocultural de la persona evaluada.",
+      "closing": "Así, entiendo que ninguna técnica aislada supera el acogimiento a la singularidad de cada persona."
     },
     "goal": {
-      "title": "[ES] O que eu quero com a psicologia",
-      "body": "[ES] O meu maior objetivo em psicologia é contribuir para a valorização da classe profissional, de modo a me comprometer com a ética da profissão e com a prática responsabilizada com o impacto real que o nosso trabalho gera na vida das pessoas."
+      "title": "Qué quiero con la psicología",
+      "body": "Mi mayor objetivo en psicología es contribuir a la valorización de la clase profesional, comprometiéndome con la ética de la profesión y con una práctica que responda por el impacto real que nuestro trabajo genera en la vida de las personas."
     },
     "experiences": {
       "graduacao-uff": {
-        "title": "[ES] Graduação em Psicologia",
-        "role": "[ES] Estudante de Psicologia (10º período)",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "Licenciatura en Psicología",
+        "role": "Estudiante de Psicología (10.º semestre)",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "seanp-uff": {
-        "title": "[ES] SEANP UFF",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "SEANP UFF",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "laenp-uff": {
-        "title": "[ES] LAENP UFF",
-        "role": "[ES] Vice-presidência",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "LAENP UFF",
+        "role": "Vicepresidencia",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "sarem-ii": {
-        "title": "[ES] SAREM II",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "SAREM II",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "sri-uff": {
-        "title": "[ES] SRI UFF",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "SRI UFF",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "ieee": {
-        "title": "[ES] IEEE",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "IEEE",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "aiesec": {
-        "title": "[ES] AIESEC",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "AIESEC",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "curso-de-ferias-neuropsicologia": {
-        "title": "[ES] Facilitação no Curso de Férias de Neuropsicologia",
-        "role": "[ES] Facilitadora",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "Facilitación en el Curso de Vacaciones de Neuropsicología",
+        "role": "Facilitadora",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "neuro-upc-huap": {
-        "title": "[ES] NeuroUPC — HUAP",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "NeuroUPC — HUAP",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "pesquisa-e-publicacao": {
-        "title": "[ES] Projeto de pesquisa e publicação de artigos científicos",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "Proyecto de investigación y publicación de artículos científicos",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "estagio-saude-do-trabalhador": {
-        "title": "[ES] Estágio em saúde do trabalhador",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]", "[ES] [ATIVIDADE 2]"]
+        "title": "Prácticas en salud laboral",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "seap-policia-penal": {
-        "title": "[ES] SEAP — Polícia Penal do Rio de Janeiro",
-        "role": "[ES] [CARGO]",
-        "summary": "[ES] [RESUMO]",
-        "activities": ["[ES] [ATIVIDADE 1]"]
+        "title": "SEAP — Policía Penal de Río de Janeiro",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]"]
       }
     },
     "instruments": {
-      "disclaimer": "[ES] Aplicação e correção sob supervisão, em contexto de formação.",
+      "disclaimer": "Aplicación y corrección bajo supervisión, en un contexto de formación.",
       "levels": {
-        "applied-and-scored": "[ES] aplicado e corrigido",
-        "applied-only": "[ES] apenas aplicado"
+        "applied-and-scored": "aplicado y corregido",
+        "applied-only": "solo aplicado"
       },
       "domains": {
-        "inteligencia": "[ES] Inteligência",
-        "memoria": "[ES] Memória",
-        "atencao-e-funcoes-executivas": "[ES] Atenção e funções executivas",
-        "linguagem-e-fala": "[ES] Linguagem e fala",
-        "personalidade-e-emocional": "[ES] Personalidade e aspectos emocionais",
-        "rastreio-e-demencia": "[ES] Rastreio e demência",
-        "social-e-desenvolvimento": "[ES] Cognição social e desenvolvimento",
-        "funcionalidade-e-sensorial": "[ES] Funcionalidade e sensorial",
-        "unclassified": "[ES] Outros instrumentos"
+        "inteligencia": "Inteligencia",
+        "memoria": "Memoria",
+        "atencao-e-funcoes-executivas": "Atención y funciones ejecutivas",
+        "linguagem-e-fala": "Lenguaje y habla",
+        "personalidade-e-emocional": "Personalidad y aspectos emocionales",
+        "rastreio-e-demencia": "Cribado y demencia",
+        "social-e-desenvolvimento": "Cognición social y desarrollo",
+        "funcionalidade-e-sensorial": "Funcionalidad y sensorial",
+        "unclassified": "Otros instrumentos"
       },
       "notes": {
-        "bdefs": "[ES] versões longa e curta",
-        "neuupsilin": "[ES] bateria breve, cobre mais de um domínio",
-        "dominio-a-confirmar": "[ES] domínio a confirmar"
+        "bdefs": "versiones larga y corta",
+        "neuupsilin": "batería breve, abarca más de un dominio",
+        "dominio-a-confirmar": "dominio por confirmar"
       }
     },
     "skills": {
-      "documents": "[ES] Documentos psicológicos e registro documental conforme as resoluções do CFP, incluindo o laudo resultante das avaliações neuropsicológicas.",
-      "spreadsheets": "[ES] Criação de planilhas e dashboards automatizados, com tabelas dinâmicas e gráficos para uso recorrente.",
-      "canva": "[ES] Ferramenta usada na AIESEC e em apresentações acadêmicas.",
-      "languages": "[ES] A proficiência em inglês foi útil na atuação na SRI, sobretudo na comunicação com estudantes de mobilidade internacional.",
+      "documents": "Documentos psicológicos y registro documental conforme a las resoluciones del CFP, incluido el informe resultante de las evaluaciones neuropsicológicas.",
+      "spreadsheets": "Creación de hojas de cálculo y paneles automatizados, con tablas dinámicas y gráficos para uso recurrente.",
+      "canva": "Herramienta utilizada en AIESEC y en presentaciones académicas.",
+      "languages": "El dominio del inglés resultó útil en mi trabajo en la SRI, sobre todo en la comunicación con estudiantes de movilidad internacional.",
       "spreadsheetFunctions": [
-        "FILTER",
+        "FILTRAR",
         "BUSCARV",
         "BUSCARH",
         "CONTAR.SI",
-        "CONTAR",
+        "CONTARA",
         "CONCATENAR",
         "INDICE",
         "MAX",
@@ -188,13 +188,13 @@
     },
     "certifications": {
       "toefl-itp": {
-        "detail": "[ES] [NOTA E ANO]"
+        "detail": "[NOTA E ANO]"
       },
       "excel-intermediario": {
-        "detail": "[ES] [INSTITUIÇÃO E ANO]"
+        "detail": "[INSTITUIÇÃO E ANO]"
       },
       "power-bi": {
-        "detail": "[ES] [INSTITUIÇÃO E ANO]"
+        "detail": "[INSTITUIÇÃO E ANO]"
       }
     }
   }

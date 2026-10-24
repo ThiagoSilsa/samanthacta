@@ -17,7 +17,6 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-
 /**
  * Índice das experiências, separado em principais e outras — a mesma divisão da linha do
  * tempo, para que a hierarquia não mude conforme a página.

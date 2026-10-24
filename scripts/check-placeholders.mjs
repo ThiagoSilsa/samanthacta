@@ -5,9 +5,14 @@
  * Dois tipos, contados separadamente porque têm prazos diferentes:
  *
  * - **conteúdo**: `[PERÍODO]`, `[CARGO]`, `[RESUMO]`… informação que a cliente ainda não
- *   enviou. Bloqueia a publicação, mas não o desenvolvimento.
- * - **tradução**: valores prefixados com `[EN]` ou `[ES]` nos JSONs de idioma. Só se
- *   resolvem na etapa 13, com revisão humana.
+ *   enviou. Bloqueia a publicação, mas não o desenvolvimento. Conta nos três idiomas,
+ *   porque o visitante em EN ou ES também vê o colchete.
+ * - **tradução**: valores prefixados com `[EN]` ou `[ES]` nos JSONs de idioma. A tradução
+ *   é feita por IA e conferida pela cliente — o marcador só existe enquanto a string não
+ *   foi traduzida.
+ *
+ * Também confere se os idiomas estão **em sincronia**: um placeholder que sobreviveu em EN
+ * ou ES depois de resolvido em PT é tradução esquecida, e passaria despercebido.
  *
  * Uso:
  *   node scripts/check-placeholders.mjs            # relatório, sempre sai com 0
@@ -49,6 +54,8 @@ const isComment = (line) => {
 
 const content = new Map();
 const translation = new Map();
+/** Tokens de placeholder por idioma, para detectar tradução esquecida. */
+const tokensByLocale = new Map();
 
 const bump = (bucket, file, value) => {
   if (!bucket.has(file)) bucket.set(file, { count: 0, values: new Set() });
@@ -60,12 +67,7 @@ const bump = (bucket, file, value) => {
 for (const file of walk(TARGET_DIR)) {
   const rel = relative(ROOT, file).split("\\").join("/");
   const isJson = file.endsWith(".json");
-  /**
-   * Nos JSONs de inglês e espanhol o placeholder de conteúdo é herdado do português
-   * (`[EN] [CARGO]`). Contá-lo lá infla o número com a mesma pendência três vezes; o que
-   * interessa nesses arquivos é só o marcador de tradução.
-   */
-  const isTranslationFile = /\/messages\/(en|es)\.json$/.test(rel);
+  const locale = rel.match(/messages\/(pt|en|es)\.json$/)?.[1];
 
   readFileSync(file, "utf8")
     .split("\n")
@@ -74,7 +76,13 @@ for (const file of walk(TARGET_DIR)) {
 
       for (const value of line.match(PLACEHOLDER) ?? []) {
         if (TRANSLATION_MARKERS.has(value)) bump(translation, rel, value);
-        else if (!isTranslationFile) bump(content, rel, value);
+        else {
+          bump(content, rel, value);
+          if (locale) {
+            if (!tokensByLocale.has(locale)) tokensByLocale.set(locale, new Set());
+            tokensByLocale.get(locale).add(value);
+          }
+        }
       }
     });
 }
@@ -101,19 +109,88 @@ const report = (title, bucket, hint) => {
 report(
   "Conteúdo pendente",
   content,
-  "bloqueia publicação, não desenvolvimento",
+  "bloqueia publicação, não desenvolvimento; conta nos três idiomas",
 );
 report(
   "Tradução pendente",
   translation,
-  "resolve na etapa 13, com revisão humana",
+  "tradução por IA a partir do pt; revisão em docs/traducao-revisao.md",
 );
+
+/**
+ * Placeholder que existe em EN/ES e não existe em PT é sobra: o texto em português já
+ * recebeu conteúdo real e a tradução não acompanhou.
+ */
+const ptTokens = tokensByLocale.get("pt") ?? new Set();
+const desync = [];
+for (const locale of ["en", "es"]) {
+  for (const token of tokensByLocale.get(locale) ?? []) {
+    if (!ptTokens.has(token)) desync.push(`${locale}: ${token}`);
+  }
+}
+
+/**
+ * Chave criada no `pt.json` e esquecida nos outros idiomas não aparece em lugar nenhum: o
+ * next-intl não encontra a mensagem e a página mostra a chave crua. Comparar as árvores de
+ * chaves é a única forma de ver isso antes de abrir a página em inglês.
+ */
+const keyPaths = (value, prefix = "") => {
+  if (Array.isArray(value))
+    return value.flatMap((item, index) => keyPaths(item, `${prefix}[${index}]`));
+  if (value && typeof value === "object")
+    return Object.entries(value).flatMap(([key, child]) =>
+      keyPaths(child, prefix ? `${prefix}.${key}` : key),
+    );
+  return [prefix];
+};
+
+const messages = new Map();
+for (const locale of ["pt", "en", "es"]) {
+  const file = join(TARGET_DIR, "messages", `${locale}.json`);
+  try {
+    messages.set(
+      locale,
+      new Set(keyPaths(JSON.parse(readFileSync(file, "utf8")))),
+    );
+  } catch {
+    messages.set(locale, new Set());
+  }
+}
+
+const ptKeys = messages.get("pt") ?? new Set();
+const missingKeys = [];
+for (const locale of ["en", "es"]) {
+  const keys = messages.get(locale) ?? new Set();
+  for (const key of ptKeys)
+    if (!keys.has(key)) missingKeys.push(`${locale}: falta ${key}`);
+  for (const key of keys)
+    if (!ptKeys.has(key)) missingKeys.push(`${locale}: sobra ${key}`);
+}
+
+console.log(`\nIdiomas em sincronia`);
+if (desync.length === 0 && missingKeys.length === 0) {
+  console.log("  sim — chaves e placeholders batem entre pt, en e es");
+} else {
+  if (desync.length > 0) {
+    console.log(
+      `  não — ${desync.length} placeholder(s) sem equivalente em pt.json`,
+    );
+    for (const item of desync.sort()) console.log(`    ${item}`);
+  }
+  if (missingKeys.length > 0) {
+    console.log(`  não — ${missingKeys.length} chave(s) fora de sincronia`);
+    for (const item of missingKeys.sort()) console.log(`    ${item}`);
+  }
+}
 
 const total =
   [...content.values()].reduce((sum, entry) => sum + entry.count, 0) +
   [...translation.values()].reduce((sum, entry) => sum + entry.count, 0);
 
-if (process.argv.includes("--strict") && total > 0) {
+if (
+  process.argv.includes("--strict") &&
+  (total > 0 || desync.length > 0 || missingKeys.length > 0)
+) {
   console.error(`\n${total} pendência(s). Publicação bloqueada.`);
   process.exit(1);
 }

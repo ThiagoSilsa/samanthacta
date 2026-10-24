@@ -58,122 +58,122 @@
   },
   "content": {
     "profile": {
-      "headline": "[EN] Estudante de Psicologia (10º período) na UFF Niterói, com experiência em neuropsicologia clínica, avaliação psicológica, gestão de pessoas e análise do comportamento.",
-      "greeting": "[EN] Olá! Meu nome é",
-      "welcome": "[EN] Fico animada com a sua presença!",
+      "headline": "Psychology student (10th semester) at UFF Niterói, with experience in clinical neuropsychology, psychological assessment, people management and behavior analysis.",
+      "greeting": "Hello! My name is",
+      "welcome": "I'm glad you're here!",
       "locationLine": "Maricá | Niterói"
     },
     "assessment": {
-      "title": "[EN] Como eu entendo a avaliação psicológica",
-      "body": "[EN] Eu defendo a avaliação psicológica integrada, combinando os seus pilares — entrevista, observação e aplicação de instrumentos psicológicos — com a escuta humanizada e voltada para a realidade sociocultural do avaliando.",
-      "closing": "[EN] Assim, eu entendo que nenhuma técnica isolada supera o acolhimento à singularidade de cada um."
+      "title": "How I understand psychological assessment",
+      "body": "I advocate integrated psychological assessment, combining its pillars — interview, observation and the administration of psychological instruments — with listening that is humane and attuned to the sociocultural reality of the person being assessed.",
+      "closing": "So I understand that no isolated technique outweighs welcoming the uniqueness of each person."
     },
     "goal": {
-      "title": "[EN] O que eu quero com a psicologia",
-      "body": "[EN] O meu maior objetivo em psicologia é contribuir para a valorização da classe profissional, de modo a me comprometer com a ética da profissão e com a prática responsabilizada com o impacto real que o nosso trabalho gera na vida das pessoas."
+      "title": "What I want from psychology",
+      "body": "My main goal in psychology is to contribute to strengthening the profession, committing myself to its ethics and to a practice that is accountable for the real impact our work has on people's lives."
     },
     "experiences": {
       "graduacao-uff": {
-        "title": "[EN] Graduação em Psicologia",
-        "role": "[EN] Estudante de Psicologia (10º período)",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "Undergraduate degree in Psychology",
+        "role": "Psychology student (10th semester)",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "seanp-uff": {
-        "title": "[EN] SEANP UFF",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "SEANP UFF",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "laenp-uff": {
-        "title": "[EN] LAENP UFF",
-        "role": "[EN] Vice-presidência",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "LAENP UFF",
+        "role": "Vice-presidency",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "sarem-ii": {
-        "title": "[EN] SAREM II",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "SAREM II",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "sri-uff": {
-        "title": "[EN] SRI UFF",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "SRI UFF",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "ieee": {
-        "title": "[EN] IEEE",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "IEEE",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "aiesec": {
-        "title": "[EN] AIESEC",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "AIESEC",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "curso-de-ferias-neuropsicologia": {
-        "title": "[EN] Facilitação no Curso de Férias de Neuropsicologia",
-        "role": "[EN] Facilitadora",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "Facilitation at the Neuropsychology Summer Course",
+        "role": "Facilitator",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "neuro-upc-huap": {
-        "title": "[EN] NeuroUPC — HUAP",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "NeuroUPC — HUAP",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "pesquisa-e-publicacao": {
-        "title": "[EN] Projeto de pesquisa e publicação de artigos científicos",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "Research project and publication of scientific articles",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "estagio-saude-do-trabalhador": {
-        "title": "[EN] Estágio em saúde do trabalhador",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
+        "title": "Internship in occupational health",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
       },
       "seap-policia-penal": {
-        "title": "[EN] SEAP — Polícia Penal do Rio de Janeiro",
-        "role": "[EN] [CARGO]",
-        "summary": "[EN] [RESUMO]",
-        "activities": ["[EN] [ATIVIDADE 1]"]
+        "title": "SEAP — Rio de Janeiro State Penal Police",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]"]
       }
     },
     "instruments": {
-      "disclaimer": "[EN] Aplicação e correção sob supervisão, em contexto de formação.",
+      "disclaimer": "Administration and scoring under supervision, in a training context.",
       "levels": {
-        "applied-and-scored": "[EN] aplicado e corrigido",
-        "applied-only": "[EN] apenas aplicado"
+        "applied-and-scored": "administered and scored",
+        "applied-only": "administered only"
       },
       "domains": {
-        "inteligencia": "[EN] Inteligência",
-        "memoria": "[EN] Memória",
-        "atencao-e-funcoes-executivas": "[EN] Atenção e funções executivas",
-        "linguagem-e-fala": "[EN] Linguagem e fala",
-        "personalidade-e-emocional": "[EN] Personalidade e aspectos emocionais",
-        "rastreio-e-demencia": "[EN] Rastreio e demência",
-        "social-e-desenvolvimento": "[EN] Cognição social e desenvolvimento",
-        "funcionalidade-e-sensorial": "[EN] Funcionalidade e sensorial",
-        "unclassified": "[EN] Outros instrumentos"
+        "inteligencia": "Intelligence",
+        "memoria": "Memory",
+        "atencao-e-funcoes-executivas": "Attention and executive functions",
+        "linguagem-e-fala": "Language and speech",
+        "personalidade-e-emocional": "Personality and emotional aspects",
+        "rastreio-e-demencia": "Screening and dementia",
+        "social-e-desenvolvimento": "Social cognition and development",
+        "funcionalidade-e-sensorial": "Functioning and sensory",
+        "unclassified": "Other instruments"
       },
       "notes": {
-        "bdefs": "[EN] versões longa e curta",
-        "neuupsilin": "[EN] bateria breve, cobre mais de um domínio",
-        "dominio-a-confirmar": "[EN] domínio a confirmar"
+        "bdefs": "long and short forms",
+        "neuupsilin": "brief battery covering more than one domain",
+        "dominio-a-confirmar": "domain to be confirmed"
       }
     },
     "skills": {
-      "documents": "[EN] Documentos psicológicos e registro documental conforme as resoluções do CFP, incluindo o laudo resultante das avaliações neuropsicológicas.",
-      "spreadsheets": "[EN] Criação de planilhas e dashboards automatizados, com tabelas dinâmicas e gráficos para uso recorrente.",
-      "canva": "[EN] Ferramenta usada na AIESEC e em apresentações acadêmicas.",
-      "languages": "[EN] A proficiência em inglês foi útil na atuação na SRI, sobretudo na comunicação com estudantes de mobilidade internacional.",
+      "documents": "Psychological documents and record keeping in accordance with CFP resolutions, including the report resulting from neuropsychological assessments.",
+      "spreadsheets": "Building spreadsheets and automated dashboards, with pivot tables and charts for recurring use.",
+      "canva": "Tool used at AIESEC and in academic presentations.",
+      "languages": "English proficiency was useful in my work at SRI, especially when communicating with international exchange students.",
       "spreadsheetFunctions": [
         "FILTER",
         "VLOOKUP",
@@ -188,13 +188,13 @@
     },
     "certifications": {
       "toefl-itp": {
-        "detail": "[EN] [NOTA E ANO]"
+        "detail": "[NOTA E ANO]"
       },
       "excel-intermediario": {
-        "detail": "[EN] [INSTITUIÇÃO E ANO]"
+        "detail": "[INSTITUIÇÃO E ANO]"
       },
       "power-bi": {
-        "detail": "[EN] [INSTITUIÇÃO E ANO]"
+        "detail": "[INSTITUIÇÃO E ANO]"
       }
     }
   }

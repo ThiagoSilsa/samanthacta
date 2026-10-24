@@ -27,7 +27,9 @@ const rawUrl = process.env.NEXT_PUBLIC_SITE_URL?.trim();
 
 export const hasPublicUrl = Boolean(rawUrl && rawUrl.length > 0);
 
-export const siteUrl = new URL(rawUrl && rawUrl.length > 0 ? rawUrl : "http://localhost:3000");
+export const siteUrl = new URL(
+  rawUrl && rawUrl.length > 0 ? rawUrl : "http://localhost:3000",
+);
 
 /** URL absoluta a partir de um caminho interno (`/experiencias`). */
 export function absoluteUrl(pathname: string): string {
