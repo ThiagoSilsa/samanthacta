@@ -1,13 +1,19 @@
 // external
 import type { ReactNode } from "react";
 
+// components
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+
 /**
  * Card de texto do posicionamento.
  *
- * O que separa o card do resto da página é um **filete de 2px no topo** e espaço — não uma
- * caixa. O `--card` do tema é a mesma cor do fundo, então um contorno fechado seria apenas
- * uma moldura desenhada em volta de dois parágrafos; a direção de arte (D-015) escolheu
- * filete justamente para não virar "feature card" de landing page.
+ * Usa o `card` do shadcn (`Card`, `CardHeader`, `CardTitle`, `CardContent`), adaptado em
+ * `ui/card.tsx` à direção de arte: o contorno fechado do registro virou **filete de 2px no
+ * topo**, e o padding horizontal saiu para o texto alinhar com a única margem esquerda da
+ * página.
+ *
+ * `asChild` nos dois componentes existe para não perder semântica: o card é um
+ * `<article aria-labelledby>` e o título é um `<h2>` — o registro usaria `div` nos dois.
  *
  * Segundo uso real: avaliação integrada e objetivo profissional. Se um terceiro card nascer
  * com a mesma forma, este é o lugar.
@@ -22,15 +28,18 @@ export function TextCard({
   children: ReactNode;
 }) {
   return (
-    <article
-      aria-labelledby={id}
-      className="border-t-2 border-foreground/40 pt-6"
-    >
-      <h2 id={id} className="text-h2">
-        {title}
-      </h2>
+    <Card asChild>
+      <article aria-labelledby={id}>
+        <CardHeader>
+          <CardTitle asChild>
+            <h2 id={id} className="text-h2">
+              {title}
+            </h2>
+          </CardTitle>
+        </CardHeader>
 
-      <div className="mt-5 max-w-prose text-body">{children}</div>
-    </article>
+        <CardContent className="max-w-prose">{children}</CardContent>
+      </article>
+    </Card>
   );
 }
