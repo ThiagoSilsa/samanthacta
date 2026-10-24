@@ -1,7 +1,11 @@
+// external
 import { useTranslations } from "next-intl";
+
+// icons
 import { FaLinkedin } from "react-icons/fa6";
 import { SiGmail } from "react-icons/si";
 
+// data
 import { profile } from "@/data/profile";
 
 /**

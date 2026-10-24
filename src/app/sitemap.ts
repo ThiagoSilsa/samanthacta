@@ -1,5 +1,7 @@
+// external
 import type { MetadataRoute } from "next";
 
+// data
 import { EXPERIENCES } from "@/data/experiences";
 import { absoluteUrl } from "@/data/site";
 

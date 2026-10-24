@@ -1,8 +1,12 @@
+// external
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import type { Metadata } from "next";
 
+// data
 import { ORDERED_EXPERIENCES } from "@/data/experiences";
+
+// lib
 import { formatPeriod } from "@/lib/dates";
 
 export async function generateMetadata(): Promise<Metadata> {

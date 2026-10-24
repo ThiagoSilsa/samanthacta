@@ -1,6 +1,10 @@
+// external
 import { getTranslations } from "next-intl/server";
 
+// components
 import { InstrumentGroups } from "@/components/content/instrument-groups";
+
+// data
 import { CFP_RESOLUTIONS, CERTIFICATIONS, CANVA_PIECES } from "@/data/skills";
 
 function certificationById(id: string) {

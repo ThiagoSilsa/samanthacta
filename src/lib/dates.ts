@@ -1,4 +1,7 @@
+// data
 import type { Experience } from "@/data/types";
+
+// i18n
 import type { Locale } from "@/i18n/config";
 
 /**

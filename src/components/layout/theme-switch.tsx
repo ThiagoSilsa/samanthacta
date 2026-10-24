@@ -1,11 +1,17 @@
 "use client";
 
+// external
 import { useTranslations } from "next-intl";
 import { useTheme } from "next-themes";
 import { useSyncExternalStore } from "react";
+
+// icons
 import { FiMoon, FiSun } from "react-icons/fi";
 
+// components
 import { Switch } from "@/components/ui/switch";
+
+// lib
 import { cn } from "@/lib/utils";
 
 const subscribe = () => () => {};

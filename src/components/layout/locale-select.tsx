@@ -1,9 +1,11 @@
 "use client";
 
+// external
 import { useLocale, useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { useTransition } from "react";
 
+// components
 import {
   Select,
   SelectContent,
@@ -11,6 +13,8 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
+
+// i18n
 import { LOCALE_COOKIE, LOCALES, LOCALE_NATIVE_NAME } from "@/i18n/config";
 
 const ONE_YEAR_IN_SECONDS = 60 * 60 * 24 * 365;

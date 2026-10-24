@@ -1,5 +1,7 @@
+// external
 import type { MetadataRoute } from "next";
 
+// data
 import { absoluteUrl, hasPublicUrl } from "@/data/site";
 
 /**

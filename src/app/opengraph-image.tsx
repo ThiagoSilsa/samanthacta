@@ -1,5 +1,7 @@
+// external
 import { ImageResponse } from "next/og";
 
+// data
 import { profile } from "@/data/profile";
 import { site } from "@/data/site";
 

@@ -1,5 +1,7 @@
+// external
 import { useTranslations } from "next-intl";
 
+// data
 import { profile } from "@/data/profile";
 
 /**

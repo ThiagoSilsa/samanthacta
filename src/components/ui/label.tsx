@@ -1,8 +1,11 @@
 "use client";
 
+// external
 import * as React from "react";
-import { cn } from "@/lib/utils";
 import { Label as LabelPrimitive } from "radix-ui";
+
+// lib
+import { cn } from "@/lib/utils";
 
 function Label({
   className,

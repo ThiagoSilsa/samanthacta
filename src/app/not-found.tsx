@@ -1,3 +1,4 @@
+// external
 import { getTranslations } from "next-intl/server";
 import Link from "next/link";
 

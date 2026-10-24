@@ -1,6 +1,10 @@
+// external
 import { getTranslations } from "next-intl/server";
 
+// components
 import { ContactLinks } from "@/components/layout/contact-links";
+
+// data
 import { profile } from "@/data/profile";
 
 /**

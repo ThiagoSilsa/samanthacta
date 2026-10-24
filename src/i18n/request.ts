@@ -1,6 +1,8 @@
+// external
 import { cookies } from "next/headers";
 import { getRequestConfig } from "next-intl/server";
 
+// i18n
 import { DEFAULT_LOCALE, isLocale, LOCALE_COOKIE } from "./config";
 
 /**

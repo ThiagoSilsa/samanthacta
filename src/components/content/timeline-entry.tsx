@@ -1,8 +1,14 @@
+// external
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
+
+// icons
 import { FiChevronDown } from "react-icons/fi";
 
+// data
 import type { Experience } from "@/data/types";
+
+// lib
 import { formatPeriod } from "@/lib/dates";
 import { cn } from "@/lib/utils";
 

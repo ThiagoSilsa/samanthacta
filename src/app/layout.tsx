@@ -1,15 +1,22 @@
+// external
 import type { Metadata } from "next";
 import { NextIntlClientProvider } from "next-intl";
 import { getLocale, getMessages, getTranslations } from "next-intl/server";
 import { Source_Sans_3, Spectral } from "next/font/google";
 
+// components
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
+
+// data
 import { profile } from "@/data/profile";
 import { absoluteUrl, hasPublicUrl, site, siteUrl } from "@/data/site";
+
+// i18n
 import { HTML_LANG, type Locale } from "@/i18n/config";
 
+// styles
 import "./globals.css";
 
 /*

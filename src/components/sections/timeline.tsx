@@ -1,6 +1,10 @@
+// external
 import { getTranslations } from "next-intl/server";
 
+// components
 import { TimelineEntry } from "@/components/content/timeline-entry";
+
+// data
 import { ORDERED_EXPERIENCES } from "@/data/experiences";
 
 /**

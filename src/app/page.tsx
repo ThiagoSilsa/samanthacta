@@ -1,3 +1,4 @@
+// components
 import { ContactCta } from "@/components/sections/contact-cta";
 import { Hero } from "@/components/sections/hero";
 import { IntegratedAssessment } from "@/components/sections/integrated-assessment";

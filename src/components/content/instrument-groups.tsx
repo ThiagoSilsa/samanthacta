@@ -1,5 +1,7 @@
+// external
 import { getTranslations } from "next-intl/server";
 
+// data
 import { INSTRUMENTS, INSTRUMENT_DOMAIN_ORDER } from "@/data/instruments";
 
 /**

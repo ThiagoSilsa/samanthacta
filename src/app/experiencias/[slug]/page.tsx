@@ -1,9 +1,13 @@
+// external
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
+// data
 import { EXPERIENCES, findExperienceBySlug } from "@/data/experiences";
+
+// lib
 import { formatPeriod } from "@/lib/dates";
 
 /**

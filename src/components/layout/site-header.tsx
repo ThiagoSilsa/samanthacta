@@ -1,7 +1,10 @@
+// external
 import Link from "next/link";
 
+// data
 import { profile } from "@/data/profile";
 
+// components
 import { ContactLinks } from "./contact-links";
 import { LocaleSelect } from "./locale-select";
 import { ThemeSwitch } from "./theme-switch";
