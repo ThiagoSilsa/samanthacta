@@ -9,7 +9,11 @@ export const CFP_RESOLUTIONS: string[] = [
 
 export const CERTIFICATIONS: Certification[] = [
   { id: "toefl-itp", name: "TOEFL ITP", imageSrc: null },
-  { id: "excel-intermediario", name: "Microsoft Excel — nível intermediário", imageSrc: null },
+  {
+    id: "excel-intermediario",
+    name: "Microsoft Excel — nível intermediário",
+    imageSrc: null,
+  },
   { id: "power-bi", name: "Power BI", imageSrc: null },
 ];
 

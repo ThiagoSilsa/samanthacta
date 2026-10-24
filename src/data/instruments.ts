@@ -36,13 +36,21 @@ export const INSTRUMENTS: Instrument[] = [
     domain: "atencao-e-funcoes-executivas",
     level: "applied-and-scored",
   },
-  { name: "CPT", domain: "atencao-e-funcoes-executivas", level: "applied-and-scored" },
+  {
+    name: "CPT",
+    domain: "atencao-e-funcoes-executivas",
+    level: "applied-and-scored",
+  },
   {
     name: "Stroop cor-palavra",
     domain: "atencao-e-funcoes-executivas",
     level: "applied-and-scored",
   },
-  { name: "Hayling", domain: "atencao-e-funcoes-executivas", level: "applied-and-scored" },
+  {
+    name: "Hayling",
+    domain: "atencao-e-funcoes-executivas",
+    level: "applied-and-scored",
+  },
   {
     name: "DEX — Questionário Disexecutivo",
     domain: "atencao-e-funcoes-executivas",
@@ -54,7 +62,11 @@ export const INSTRUMENTS: Instrument[] = [
     level: "applied-and-scored",
     noteKey: "bdefs",
   },
-  { name: "DIVA-5", domain: "atencao-e-funcoes-executivas", level: "applied-and-scored" },
+  {
+    name: "DIVA-5",
+    domain: "atencao-e-funcoes-executivas",
+    level: "applied-and-scored",
+  },
 
   // linguagem e fala
   {
@@ -69,10 +81,18 @@ export const INSTRUMENTS: Instrument[] = [
   },
 
   // personalidade e aspectos emocionais
-  { name: "SCID", domain: "personalidade-e-emocional", level: "applied-and-scored" },
+  {
+    name: "SCID",
+    domain: "personalidade-e-emocional",
+    level: "applied-and-scored",
+  },
   { name: "BFP", domain: "personalidade-e-emocional", level: "applied-only" },
   { name: "QUATI", domain: "personalidade-e-emocional", level: "applied-only" },
-  { name: "BIS-11", domain: "personalidade-e-emocional", level: "applied-and-scored" },
+  {
+    name: "BIS-11",
+    domain: "personalidade-e-emocional",
+    level: "applied-and-scored",
+  },
 
   // rastreio e demência
   {
@@ -88,9 +108,21 @@ export const INSTRUMENTS: Instrument[] = [
   { name: "BPA", domain: "rastreio-e-demencia", level: "applied-and-scored" },
 
   // social e desenvolvimento
-  { name: "SRS-2", domain: "social-e-desenvolvimento", level: "applied-and-scored" },
-  { name: "PROTEA", domain: "social-e-desenvolvimento", level: "applied-and-scored" },
-  { name: "FAUX PAS", domain: "social-e-desenvolvimento", level: "applied-and-scored" },
+  {
+    name: "SRS-2",
+    domain: "social-e-desenvolvimento",
+    level: "applied-and-scored",
+  },
+  {
+    name: "PROTEA",
+    domain: "social-e-desenvolvimento",
+    level: "applied-and-scored",
+  },
+  {
+    name: "FAUX PAS",
+    domain: "social-e-desenvolvimento",
+    level: "applied-and-scored",
+  },
 
   // funcionalidade e sensorial
   {

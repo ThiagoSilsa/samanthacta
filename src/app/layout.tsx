@@ -32,7 +32,11 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default async function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({
+  children,
+}: {
+  children: React.ReactNode;
+}) {
   const locale = (await getLocale()) as Locale;
   const messages = await getMessages();
   const t = await getTranslations("ui.nav");
@@ -56,7 +60,10 @@ export default async function RootLayout({ children }: { children: React.ReactNo
 
             <SiteHeader />
 
-            <main id="conteudo" className="mx-auto w-full max-w-5xl flex-1 px-5 py-10">
+            <main
+              id="conteudo"
+              className="mx-auto w-full max-w-5xl flex-1 px-5 py-10"
+            >
               {children}
             </main>
 

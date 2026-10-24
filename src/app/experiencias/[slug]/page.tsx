@@ -11,7 +11,11 @@ export function generateStaticParams() {
   return EXPERIENCES.map((experience) => ({ slug: experience.slug }));
 }
 
-export default async function ExperiencePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ExperiencePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const experience = findExperienceBySlug(slug);
 
@@ -23,7 +27,9 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
 
   return (
     <article>
-      <h1 className="text-h2">{t(`content.experiences.${experience.slug}.title`)}</h1>
+      <h1 className="text-h2">
+        {t(`content.experiences.${experience.slug}.title`)}
+      </h1>
       <p className="text-muted-foreground">{t("ui.placeholder")}</p>
     </article>
   );
