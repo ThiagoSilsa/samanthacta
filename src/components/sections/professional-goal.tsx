@@ -1,21 +1,21 @@
+// external
 import { getTranslations } from "next-intl/server";
+
+// components
+import { TextCard } from "@/components/content/text-card";
 
 /**
  * Objetivo profissional.
  *
- * Um parágrafo só, sem destaque tipográfico: a seção anterior já usa esse recurso, e repetir
- * o mesmo gesto em duas seções seguidas transforma destaque em padrão.
+ * Um parágrafo só, sem destaque tipográfico: o card anterior já usa esse recurso, e repetir
+ * o mesmo gesto em dois cards lado a lado transforma destaque em padrão.
  */
 export async function ProfessionalGoal() {
   const t = await getTranslations("content.goal");
 
   return (
-    <section aria-labelledby="objetivo" className="mt-12 max-w-prose">
-      <h2 id="objetivo" className="text-h2">
-        {t("title")}
-      </h2>
-
-      <p className="mt-5 text-body">{t("body")}</p>
-    </section>
+    <TextCard id="objetivo" title={t("title")}>
+      <p>{t("body")}</p>
+    </TextCard>
   );
 }
