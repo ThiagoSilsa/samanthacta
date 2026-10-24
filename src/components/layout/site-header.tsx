@@ -3,7 +3,7 @@ import Link from "next/link";
 import { profile } from "@/data/profile";
 
 import { LocaleSelect } from "./locale-select";
-import { ThemeToggle } from "./theme-toggle";
+import { ThemeSwitch } from "./theme-switch";
 
 /**
  * Esqueleto do cabeçalho. Os ícones de contato e a navegação entram na etapa 05 — aqui o
@@ -19,7 +19,7 @@ export function SiteHeader() {
 
         <div className="flex items-center gap-4">
           <LocaleSelect />
-          <ThemeToggle />
+          <ThemeSwitch />
         </div>
       </div>
     </header>

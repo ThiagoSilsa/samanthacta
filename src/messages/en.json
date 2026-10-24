@@ -7,11 +7,7 @@
     "nav": {
       "skipToContent": "Skip to content",
       "language": "Language",
-      "theme": "Theme",
-      "themeSystem": "System",
-      "themeLight": "Light",
-      "themeDark": "Dark",
-      "themeChange": "Change theme"
+      "themeToggle": "Dark theme"
     },
     "footer": {
       "location": "Maricá and Niterói, RJ, Brazil"
