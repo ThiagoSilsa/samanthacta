@@ -17,7 +17,11 @@ import { cn } from "@/lib/utils";
  * Diferenciação entre principal e secundária é **tipográfica e de espaço**, não de cor ou
  * caixa: título maior e mais respiro para as principais.
  */
-export async function TimelineEntry({ experience }: { experience: Experience }) {
+export async function TimelineEntry({
+  experience,
+}: {
+  experience: Experience;
+}) {
   const locale = await getLocale();
   const t = await getTranslations();
 
@@ -30,7 +34,12 @@ export async function TimelineEntry({ experience }: { experience: Experience }) 
   const period = formatPeriod(experience, locale, t("ui.timeline.current"));
 
   return (
-    <li className={cn("border-l border-border pl-5", isPrincipal ? "pb-10" : "pb-6")}>
+    <li
+      className={cn(
+        "border-l border-border pl-5",
+        isPrincipal ? "pb-10" : "pb-6",
+      )}
+    >
       <article>
         <header>
           <p className="text-sm text-muted-foreground">
@@ -41,7 +50,9 @@ export async function TimelineEntry({ experience }: { experience: Experience }) 
             )}
           </p>
 
-          <h3 className={cn("mt-1", isPrincipal ? "text-h3" : "text-lead")}>{title}</h3>
+          <h3 className={cn("mt-1", isPrincipal ? "text-h3" : "text-lead")}>
+            {title}
+          </h3>
 
           <p className="mt-1 text-sm text-muted-foreground">
             {role} · {experience.organization}
@@ -51,7 +62,10 @@ export async function TimelineEntry({ experience }: { experience: Experience }) 
         <details className="group mt-1">
           <summary className="flex min-h-11 w-fit cursor-pointer list-none items-center gap-1 text-sm text-muted-foreground hover:text-foreground focus-visible:outline-2 focus-visible:outline-offset-2 [&::-webkit-details-marker]:hidden">
             {t("ui.timeline.summaryToggle")}
-            <FiChevronDown aria-hidden className="size-4 group-open:rotate-180" />
+            <FiChevronDown
+              aria-hidden
+              className="size-4 group-open:rotate-180"
+            />
           </summary>
           <p className="mt-1 mb-2 text-muted-foreground">{summary}</p>
         </details>

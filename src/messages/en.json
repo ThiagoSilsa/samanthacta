@@ -30,6 +30,15 @@
       "welcome": "[EN] Fico animada com a sua presença!",
       "locationLine": "Maricá | Niterói"
     },
+    "assessment": {
+      "title": "[EN] Como eu entendo a avaliação psicológica",
+      "body": "[EN] Eu defendo a avaliação psicológica integrada, combinando os seus pilares — entrevista, observação e aplicação de instrumentos psicológicos — com a escuta humanizada e voltada para a realidade sociocultural do avaliando.",
+      "closing": "[EN] Assim, eu entendo que nenhuma técnica isolada supera o acolhimento à singularidade de cada um."
+    },
+    "goal": {
+      "title": "[EN] O que eu quero com a psicologia",
+      "body": "[EN] O meu maior objetivo em psicologia é contribuir para a valorização da classe profissional, de modo a me comprometer com a ética da profissão e com a prática responsabilizada com o impacto real que o nosso trabalho gera na vida das pessoas."
+    },
     "experiences": {
       "graduacao-uff": {
         "title": "[EN] Graduação em Psicologia",
