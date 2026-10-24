@@ -18,7 +18,9 @@ export async function IntegratedAssessment() {
 
       <p className="mt-5 text-body">{t("body")}</p>
 
-      <p className="mt-6 font-heading text-lead text-foreground">{t("closing")}</p>
+      <p className="mt-6 font-heading text-lead text-foreground">
+        {t("closing")}
+      </p>
     </section>
   );
 }

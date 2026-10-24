@@ -15,11 +15,34 @@
     "footer": {
       "location": "Maricá and Niterói, RJ, Brazil"
     },
+    "notFound": {
+      "title": "Page not found",
+      "body": "The address may have changed or may never have existed.",
+      "back": "Back to the home page"
+    },
     "timeline": {
       "title": "Timeline",
       "summaryToggle": "Show summary",
       "seeFull": "See full experience",
       "current": "present"
+    },
+    "skills": {
+      "title": "Technical skills",
+      "documents": "Psychological documents and record keeping",
+      "instruments": "Psychometric instruments",
+      "languages": "English",
+      "spreadsheets": "Excel, spreadsheets and Power BI",
+      "canva": "Canva"
+    },
+    "experiences": {
+      "title": "Experience",
+      "primary": "Main activities",
+      "other": "Other experience",
+      "activities": "Activities",
+      "breadcrumb": "Breadcrumb",
+      "home": "Home",
+      "backToIndex": "All experience",
+      "backToTimeline": "Back to timeline"
     },
     "placeholder": "Under construction"
   },

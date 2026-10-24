@@ -15,11 +15,34 @@
     "footer": {
       "location": "Maricá e Niterói, RJ"
     },
+    "notFound": {
+      "title": "Página não encontrada",
+      "body": "O endereço pode ter mudado ou nunca ter existido.",
+      "back": "Voltar ao início"
+    },
     "timeline": {
       "title": "Trajetória",
       "summaryToggle": "Ver resumo",
       "seeFull": "Ver experiência completa",
       "current": "atual"
+    },
+    "skills": {
+      "title": "Competências técnicas",
+      "documents": "Documentos psicológicos e registro documental",
+      "instruments": "Instrumentos psicométricos",
+      "languages": "Inglês",
+      "spreadsheets": "Excel, planilhas e Power BI",
+      "canva": "Canva"
+    },
+    "experiences": {
+      "title": "Experiências",
+      "primary": "Principais atividades",
+      "other": "Outras experiências",
+      "activities": "Atividades",
+      "breadcrumb": "Trilha de navegação",
+      "home": "Início",
+      "backToIndex": "Todas as experiências",
+      "backToTimeline": "Voltar à trajetória"
     },
     "placeholder": "Em construção"
   },
