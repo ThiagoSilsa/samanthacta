@@ -1,0 +1,20 @@
+{
+  "meta": {
+    "title": "Samantha Albuquerque",
+    "description": "Portfolio of Samantha Albuquerque, Psychology student with a focus on neuropsychology."
+  },
+  "nav": {
+    "skipToContent": "Skip to content",
+    "primary": "Main navigation",
+    "language": "Language",
+    "theme": "Theme",
+    "themeSystem": "System",
+    "themeLight": "Light",
+    "themeDark": "Dark",
+    "themeChange": "Change theme"
+  },
+  "footer": {
+    "location": "Maricá and Niterói, RJ, Brazil"
+  },
+  "placeholder": "Under construction"
+}
