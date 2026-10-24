@@ -20,6 +20,11 @@
       "body": "The address may have changed or may never have existed.",
       "back": "Back to the home page"
     },
+    "contact": {
+      "title": "Get in touch",
+      "body": "Suggestions, proposals, random questions, exchanging ideas or just a quick hello can be sent to:",
+      "subject": "Contact from the website"
+    },
     "timeline": {
       "title": "Timeline",
       "summaryToggle": "Show summary",
@@ -40,6 +45,7 @@
       "other": "Other experience",
       "activities": "Activities",
       "breadcrumb": "Breadcrumb",
+      "backNav": "Return navigation",
       "home": "Home",
       "backToIndex": "All experience",
       "backToTimeline": "Back to timeline"

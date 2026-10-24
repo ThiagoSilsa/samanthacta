@@ -13,7 +13,11 @@ export function generateStaticParams() {
   return EXPERIENCES.map((experience) => ({ slug: experience.slug }));
 }
 
-export default async function ExperiencePage({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ExperiencePage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
   const { slug } = await params;
   const experience = findExperienceBySlug(slug);
 
@@ -56,7 +60,9 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
             {formatPeriod(experience, locale, t("ui.timeline.current"))}
           </time>
         ) : (
-          <span>{formatPeriod(experience, locale, t("ui.timeline.current"))}</span>
+          <span>
+            {formatPeriod(experience, locale, t("ui.timeline.current"))}
+          </span>
         )}
       </p>
 
@@ -71,11 +77,20 @@ export default async function ExperiencePage({ params }: { params: Promise<{ slu
         ))}
       </ul>
 
-      <nav aria-label={t("ui.experiences.breadcrumb")} className="mt-12 flex flex-col gap-2 text-sm">
-        <Link href="/experiencias" className="w-fit text-primary underline underline-offset-4">
+      <nav
+        aria-label={t("ui.experiences.backNav")}
+        className="mt-12 flex flex-col gap-2 text-sm"
+      >
+        <Link
+          href="/experiencias"
+          className="w-fit text-primary underline underline-offset-4"
+        >
           {t("ui.experiences.backToIndex")}
         </Link>
-        <Link href="/#trajetoria" className="w-fit text-primary underline underline-offset-4">
+        <Link
+          href="/#trajetoria"
+          className="w-fit text-primary underline underline-offset-4"
+        >
           {t("ui.experiences.backToTimeline")}
         </Link>
       </nav>

@@ -1,3 +1,4 @@
+import { ContactCta } from "@/components/sections/contact-cta";
 import { Hero } from "@/components/sections/hero";
 import { IntegratedAssessment } from "@/components/sections/integrated-assessment";
 import { ProfessionalGoal } from "@/components/sections/professional-goal";
@@ -12,6 +13,8 @@ export default function HomePage() {
       <IntegratedAssessment />
       <ProfessionalGoal />
       <Skills />
+      {/* Última seção da página, por decisão explícita (D-011). */}
+      <ContactCta />
     </>
   );
 }

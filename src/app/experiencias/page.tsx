@@ -12,8 +12,12 @@ export default async function ExperiencesPage() {
   const locale = await getLocale();
   const t = await getTranslations();
 
-  const primary = ORDERED_EXPERIENCES.filter((experience) => experience.kind !== "outra");
-  const other = ORDERED_EXPERIENCES.filter((experience) => experience.kind === "outra");
+  const primary = ORDERED_EXPERIENCES.filter(
+    (experience) => experience.kind !== "outra",
+  );
+  const other = ORDERED_EXPERIENCES.filter(
+    (experience) => experience.kind === "outra",
+  );
 
   const groups = [
     { id: "principais", title: t("ui.experiences.primary"), items: primary },
@@ -25,7 +29,11 @@ export default async function ExperiencesPage() {
       <h1 className="text-h1">{t("ui.experiences.title")}</h1>
 
       {groups.map((group) => (
-        <section key={group.id} aria-labelledby={`grupo-${group.id}`} className="mt-10">
+        <section
+          key={group.id}
+          aria-labelledby={`grupo-${group.id}`}
+          className="mt-10"
+        >
           <h2 id={`grupo-${group.id}`} className="text-h2">
             {group.title}
           </h2>

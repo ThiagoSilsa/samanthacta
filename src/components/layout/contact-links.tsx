@@ -11,36 +11,43 @@ import { profile } from "@/data/profile";
  * acessível próprio — ícone sozinho, sem rótulo, é inutilizável por leitor de tela. O ícone
  * em si é `aria-hidden`: quem anuncia é o link.
  */
-export function ContactLinks() {
-  const t = useTranslations("ui.nav");
+export function ContactLinks({ asNav = true }: { asNav?: boolean }) {
+  const t = useTranslations();
+  // Assunto pré-preenchido e igual em todo lugar: o mesmo link não pode se comportar
+  // de dois jeitos na mesma página.
+  const mailto = `mailto:${profile.email}?subject=${encodeURIComponent(t("ui.contact.subject"))}`;
 
   const itemClass =
     "flex size-11 items-center justify-center text-muted-foreground hover:text-foreground";
 
-  return (
-    <nav aria-label={t("contact")}>
-      <ul className="flex items-center gap-1">
-        <li>
-          <a
-            href={`mailto:${profile.email}`}
-            aria-label={t("contactEmail", { email: profile.email })}
-            className={itemClass}
-          >
-            <SiGmail aria-hidden className="size-5" />
-          </a>
-        </li>
-        <li>
-          <a
-            href={profile.linkedinUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label={t("contactLinkedin")}
-            className={itemClass}
-          >
-            <FaLinkedin aria-hidden className="size-5" />
-          </a>
-        </li>
-      </ul>
-    </nav>
+  const list = (
+    <ul className="flex items-center gap-1">
+      <li>
+        <a
+          href={mailto}
+          aria-label={t("ui.nav.contactEmail", { email: profile.email })}
+          className={itemClass}
+        >
+          <SiGmail aria-hidden className="size-5" />
+        </a>
+      </li>
+      <li>
+        <a
+          href={profile.linkedinUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label={t("ui.nav.contactLinkedin")}
+          className={itemClass}
+        >
+          <FaLinkedin aria-hidden className="size-5" />
+        </a>
+      </li>
+    </ul>
   );
+
+  /*
+   * `asNav={false}` no CTA: a seção já é uma região rotulada por "Entre em contato", e dois
+   * `nav` com o mesmo nome acessível deixam a navegação por landmarks ambígua.
+   */
+  return asNav ? <nav aria-label={t("ui.nav.contact")}>{list}</nav> : list;
 }

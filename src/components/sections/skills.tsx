@@ -85,13 +85,16 @@ export async function Skills() {
           <p className="mt-3 text-body">{t("content.skills.spreadsheets")}</p>
 
           <p className="mt-3 text-sm text-muted-foreground">
-            {(t.raw("content.skills.spreadsheetFunctions") as string[]).join(" · ")}
+            {(t.raw("content.skills.spreadsheetFunctions") as string[]).join(
+              " · ",
+            )}
           </p>
 
           <ul className="mt-3 space-y-1 text-sm text-muted-foreground">
             {[excel, powerBi].filter(Boolean).map((certification) => (
               <li key={certification!.id}>
-                {certification!.name} — {t(`content.certifications.${certification!.id}.detail`)}
+                {certification!.name} —{" "}
+                {t(`content.certifications.${certification!.id}.detail`)}
               </li>
             ))}
           </ul>

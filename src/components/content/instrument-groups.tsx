@@ -18,7 +18,9 @@ export async function InstrumentGroups() {
   return (
     <div className="mt-6 space-y-5">
       {INSTRUMENT_DOMAIN_ORDER.map((domain) => {
-        const instruments = INSTRUMENTS.filter((item) => item.domain === domain);
+        const instruments = INSTRUMENTS.filter(
+          (item) => item.domain === domain,
+        );
         if (instruments.length === 0) return null;
 
         return (

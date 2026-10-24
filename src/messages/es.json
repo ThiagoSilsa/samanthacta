@@ -20,6 +20,11 @@
       "body": "La dirección puede haber cambiado o no haber existido nunca.",
       "back": "Volver al inicio"
     },
+    "contact": {
+      "title": "Hablemos",
+      "body": "Sugerencias, propuestas, preguntas aleatorias, intercambio de ideas o un simple hola pueden enviarse a:",
+      "subject": "Contacto desde el sitio"
+    },
     "timeline": {
       "title": "Trayectoria",
       "summaryToggle": "Ver resumen",
@@ -40,6 +45,7 @@
       "other": "Otras experiencias",
       "activities": "Actividades",
       "breadcrumb": "Ruta de navegación",
+      "backNav": "Navegación de retorno",
       "home": "Inicio",
       "backToIndex": "Todas las experiencias",
       "backToTimeline": "Volver a la trayectoria"
