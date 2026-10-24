@@ -15,6 +15,12 @@
     "footer": {
       "location": "Maricá and Niterói, RJ, Brazil"
     },
+    "timeline": {
+      "title": "Timeline",
+      "summaryToggle": "Show summary",
+      "seeFull": "See full experience",
+      "current": "present"
+    },
     "placeholder": "Under construction"
   },
   "content": {
