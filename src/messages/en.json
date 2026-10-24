@@ -7,7 +7,10 @@
     "nav": {
       "skipToContent": "Skip to content",
       "language": "Language",
-      "themeToggle": "Dark theme"
+      "themeToggle": "Dark theme",
+      "contact": "Contact",
+      "contactEmail": "Send an email to {email}",
+      "contactLinkedin": "LinkedIn profile (opens in a new tab)"
     },
     "footer": {
       "location": "Maricá and Niterói, RJ, Brazil"
@@ -26,108 +29,73 @@
         "title": "[EN] Graduação em Psicologia",
         "role": "[EN] Estudante de Psicologia (10º período)",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "seanp-uff": {
         "title": "[EN] SEANP UFF",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "laenp-uff": {
         "title": "[EN] LAENP UFF",
         "role": "[EN] Vice-presidência",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "sarem-ii": {
         "title": "[EN] SAREM II",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "sri-uff": {
         "title": "[EN] SRI UFF",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "ieee": {
         "title": "[EN] IEEE",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "aiesec": {
         "title": "[EN] AIESEC",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "curso-de-ferias-neuropsicologia": {
         "title": "[EN] Facilitação no Curso de Férias de Neuropsicologia",
         "role": "[EN] Facilitadora",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "neuro-upc-huap": {
         "title": "[EN] NeuroUPC — HUAP",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "pesquisa-e-publicacao": {
         "title": "[EN] Projeto de pesquisa e publicação de artigos científicos",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "estagio-saude-do-trabalhador": {
         "title": "[EN] Estágio em saúde do trabalhador",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]",
-          "[EN] [ATIVIDADE 2]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]", "[EN] [ATIVIDADE 2]"]
       },
       "seap-policia-penal": {
         "title": "[EN] SEAP — Polícia Penal do Rio de Janeiro",
         "role": "[EN] [CARGO]",
         "summary": "[EN] [RESUMO]",
-        "activities": [
-          "[EN] [ATIVIDADE 1]"
-        ]
+        "activities": ["[EN] [ATIVIDADE 1]"]
       }
     },
     "instruments": {
