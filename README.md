@@ -42,12 +42,12 @@ npm run dev
 
 Depois, abrir `http://localhost:3000`.
 
-| Comando         | O que faz                 |
-| --------------- | ------------------------- |
+| Comando         | O que faz                   |
+| --------------- | --------------------------- |
 | `npm run dev`   | servidor de desenvolvimento |
-| `npm run build` | build de produção         |
-| `npm start`     | serve o build de produção |
-| `npm run lint`  | ESLint                    |
+| `npm run build` | build de produção           |
+| `npm start`     | serve o build de produção   |
+| `npm run lint`  | ESLint                      |
 
 ## Estrutura prevista
 
