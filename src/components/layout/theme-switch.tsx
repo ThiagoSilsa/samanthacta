@@ -29,14 +29,21 @@ export function ThemeSwitch() {
   const t = useTranslations("ui.nav");
   const { resolvedTheme, setTheme } = useTheme();
 
-  const isHydrated = useSyncExternalStore(subscribe, getClientSnapshot, getServerSnapshot);
+  const isHydrated = useSyncExternalStore(
+    subscribe,
+    getClientSnapshot,
+    getServerSnapshot,
+  );
   const isDark = isHydrated && resolvedTheme === "dark";
 
   return (
     <div className="flex items-center gap-2">
       <FiSun
         aria-hidden
-        className={cn("size-4 shrink-0 text-muted-foreground", isDark && "opacity-40")}
+        className={cn(
+          "size-4 shrink-0 text-muted-foreground",
+          isDark && "opacity-40",
+        )}
       />
       <Switch
         checked={isDark}
@@ -47,7 +54,10 @@ export function ThemeSwitch() {
       />
       <FiMoon
         aria-hidden
-        className={cn("size-4 shrink-0 text-muted-foreground", !isDark && "opacity-40")}
+        className={cn(
+          "size-4 shrink-0 text-muted-foreground",
+          !isDark && "opacity-40",
+        )}
       />
     </div>
   );
