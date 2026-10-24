@@ -1,20 +1,148 @@
 {
-  "meta": {
-    "title": "Samantha Albuquerque",
-    "description": "Portfólio de Samantha Albuquerque, estudante de Psicologia com ênfase em neuropsicologia."
+  "ui": {
+    "meta": {
+      "title": "Samantha Albuquerque",
+      "description": "Portfólio de Samantha Albuquerque, estudante de Psicologia com ênfase em neuropsicologia."
+    },
+    "nav": {
+      "skipToContent": "Ir para o conteúdo",
+      "language": "Idioma",
+      "theme": "Tema",
+      "themeSystem": "Sistema",
+      "themeLight": "Claro",
+      "themeDark": "Escuro",
+      "themeChange": "Alterar tema"
+    },
+    "footer": {
+      "location": "Maricá e Niterói, RJ"
+    },
+    "placeholder": "Em construção"
   },
-  "nav": {
-    "skipToContent": "Ir para o conteúdo",
-    "primary": "Navegação principal",
-    "language": "Idioma",
-    "theme": "Tema",
-    "themeSystem": "Sistema",
-    "themeLight": "Claro",
-    "themeDark": "Escuro",
-    "themeChange": "Alterar tema"
-  },
-  "footer": {
-    "location": "Maricá e Niterói, RJ"
-  },
-  "placeholder": "Em construção"
+  "content": {
+    "profile": {
+      "headline": "Estudante de Psicologia (10º período) na UFF Niterói, com experiência em neuropsicologia clínica, avaliação psicológica, gestão de pessoas e análise do comportamento.",
+      "greeting": "Olá! Meu nome é",
+      "welcome": "Fico animada com a sua presença!",
+      "locationLine": "Maricá | Niterói"
+    },
+    "experiences": {
+      "graduacao-uff": {
+        "title": "Graduação em Psicologia",
+        "role": "Estudante de Psicologia (10º período)",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "seanp-uff": {
+        "title": "SEANP UFF",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "laenp-uff": {
+        "title": "LAENP UFF",
+        "role": "Vice-presidência",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "sarem-ii": {
+        "title": "SAREM II",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "sri-uff": {
+        "title": "SRI UFF",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "ieee": {
+        "title": "IEEE",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "aiesec": {
+        "title": "AIESEC",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "curso-de-ferias-neuropsicologia": {
+        "title": "Facilitação no Curso de Férias de Neuropsicologia",
+        "role": "Facilitadora",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "neuro-upc-huap": {
+        "title": "NeuroUPC — HUAP",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "pesquisa-e-publicacao": {
+        "title": "Projeto de pesquisa e publicação de artigos científicos",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "estagio-saude-do-trabalhador": {
+        "title": "Estágio em saúde do trabalhador",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]", "[ATIVIDADE 2]"]
+      },
+      "seap-policia-penal": {
+        "title": "SEAP — Polícia Penal do Rio de Janeiro",
+        "role": "[CARGO]",
+        "summary": "[RESUMO]",
+        "activities": ["[ATIVIDADE 1]"]
+      }
+    },
+    "instruments": {
+      "disclaimer": "Aplicação e correção sob supervisão, em contexto de formação.",
+      "levels": {
+        "applied-and-scored": "aplicado e corrigido",
+        "applied-only": "apenas aplicado"
+      },
+      "domains": {
+        "inteligencia": "Inteligência",
+        "memoria": "Memória",
+        "atencao-e-funcoes-executivas": "Atenção e funções executivas",
+        "linguagem-e-fala": "Linguagem e fala",
+        "personalidade-e-emocional": "Personalidade e aspectos emocionais",
+        "rastreio-e-demencia": "Rastreio e demência",
+        "social-e-desenvolvimento": "Cognição social e desenvolvimento",
+        "funcionalidade-e-sensorial": "Funcionalidade e sensorial",
+        "unclassified": "Outros instrumentos"
+      },
+      "notes": {
+        "bdefs": "versões longa e curta",
+        "neuupsilin": "bateria breve, cobre mais de um domínio",
+        "dominio-a-confirmar": "domínio a confirmar"
+      }
+    },
+    "skills": {
+      "documents": "Documentos psicológicos e registro documental conforme as resoluções do CFP, incluindo o laudo resultante das avaliações neuropsicológicas.",
+      "spreadsheets": "Criação de planilhas e dashboards automatizados, com tabelas dinâmicas e gráficos para uso recorrente.",
+      "canva": "Ferramenta usada na AIESEC e em apresentações acadêmicas.",
+      "languages": "A proficiência em inglês foi útil na atuação na SRI, sobretudo na comunicação com estudantes de mobilidade internacional.",
+      "spreadsheetFunctions": [
+        "FILTER",
+        "PROCV",
+        "PROCH",
+        "CONT.SE",
+        "CONT.VALORES",
+        "CONCATENAR",
+        "ÍNDICE",
+        "MÁXIMO",
+        "MÍNIMO"
+      ]
+    },
+    "certifications": {
+      "toefl-itp": { "detail": "[NOTA E ANO]" },
+      "excel-intermediario": { "detail": "[INSTITUIÇÃO E ANO]" },
+      "power-bi": { "detail": "[INSTITUIÇÃO E ANO]" }
+    }
+  }
 }

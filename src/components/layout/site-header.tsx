@@ -1,7 +1,8 @@
-import { profile } from "@/data/profile";
-import { Link } from "@/i18n/navigation";
+import Link from "next/link";
 
-import { LocaleSwitcher } from "./locale-switcher";
+import { profile } from "@/data/profile";
+
+import { LocaleSelect } from "./locale-select";
 import { ThemeToggle } from "./theme-toggle";
 
 /**
@@ -16,8 +17,8 @@ export function SiteHeader() {
           {profile.name}
         </Link>
 
-        <div className="flex items-center gap-5">
-          <LocaleSwitcher />
+        <div className="flex items-center gap-4">
+          <LocaleSelect />
           <ThemeToggle />
         </div>
       </div>

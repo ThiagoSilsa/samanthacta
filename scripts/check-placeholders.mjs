@@ -6,8 +6,8 @@
  *
  * - **conteúdo**: `[PERÍODO]`, `[CARGO]`, `[RESUMO]`… informação que a cliente ainda não
  *   enviou. Bloqueia a publicação, mas não o desenvolvimento.
- * - **tradução**: prefixos `[EN]` e `[ES]` gerados por `untranslated()`. Só se resolvem na
- *   etapa 13, com revisão humana.
+ * - **tradução**: valores prefixados com `[EN]` ou `[ES]` nos JSONs de idioma. Só se
+ *   resolvem na etapa 13, com revisão humana.
  *
  * Uso:
  *   node scripts/check-placeholders.mjs            # relatório, sempre sai com 0
@@ -20,98 +20,74 @@ import { fileURLToPath } from "node:url";
 
 const ROOT = fileURLToPath(new URL("..", import.meta.url));
 const TARGET_DIR = join(ROOT, "src");
-const EXTENSIONS = new Set([".ts", ".tsx"]);
+const EXTENSIONS = new Set([".ts", ".tsx", ".json"]);
 
 /** Marcador visível: maiúsculas entre colchetes. `[slug]` de rota não casa. */
 const PLACEHOLDER = /\[[A-ZÁÂÃÀÉÊÍÓÔÕÚÇ][A-ZÁÂÃÀÉÊÍÓÔÕÚÇ0-9\s/_.-]*\]/g;
-
-/**
- * Cada chamada marca um texto que só existe em português. Contar os literais `[EN]`/`[ES]`
- * não serve: eles são montados em runtime dentro do helper.
- */
-const TRANSLATION_CALL = /\buntranslated(?:List)?\(/g;
-
-/** O helper é o mecanismo, não conteúdo — não entra no relatório. */
-const EXCLUDED_FILES = new Set(["src/lib/localized.ts"]);
+const TRANSLATION_MARKERS = new Set(["[EN]", "[ES]"]);
 
 const walk = (dir) => {
-  const entries = readdirSync(dir);
   const files = [];
-  for (const entry of entries) {
+  for (const entry of readdirSync(dir)) {
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) files.push(...walk(full));
-    else if (EXTENSIONS.has(full.slice(full.lastIndexOf("."))))
-      files.push(full);
+    else if (EXTENSIONS.has(full.slice(full.lastIndexOf(".")))) files.push(full);
   }
   return files;
 };
 
-/** Comentário não renderiza, então não conta como pendência de conteúdo. */
+/** Comentário de código não renderiza, então não conta como pendência. */
 const isComment = (line) => {
   const trimmed = line.trimStart();
-  return (
-    trimmed.startsWith("//") ||
-    trimmed.startsWith("*") ||
-    trimmed.startsWith("/*")
-  );
+  return trimmed.startsWith("//") || trimmed.startsWith("*") || trimmed.startsWith("/*");
 };
 
 const content = new Map();
 const translation = new Map();
 
+const bump = (bucket, file, value) => {
+  if (!bucket.has(file)) bucket.set(file, { count: 0, values: new Set() });
+  const entry = bucket.get(file);
+  entry.count += 1;
+  entry.values.add(value);
+};
+
 for (const file of walk(TARGET_DIR)) {
   const rel = relative(ROOT, file).split("\\").join("/");
-  if (EXCLUDED_FILES.has(rel)) continue;
+  const isJson = file.endsWith(".json");
+  /**
+   * Nos JSONs de inglês e espanhol o placeholder de conteúdo é herdado do português
+   * (`[EN] [CARGO]`). Contá-lo lá infla o número com a mesma pendência três vezes; o que
+   * interessa nesses arquivos é só o marcador de tradução.
+   */
+  const isTranslationFile = /\/messages\/(en|es)\.json$/.test(rel);
 
-  const lines = readFileSync(file, "utf8").split("\n");
+  readFileSync(file, "utf8")
+    .split("\n")
+    .forEach((line) => {
+      if (!isJson && isComment(line)) return;
 
-  lines.forEach((line) => {
-    if (isComment(line)) return;
-
-    const bump = (bucket, value) => {
-      if (!bucket.has(rel)) bucket.set(rel, { count: 0, values: new Set() });
-      const entry = bucket.get(rel);
-      entry.count += 1;
-      entry.values.add(value);
-    };
-
-    for (const value of line.match(PLACEHOLDER) ?? []) bump(content, value);
-
-    const untranslatedCalls = line.match(TRANSLATION_CALL) ?? [];
-    untranslatedCalls.forEach(() => bump(translation, "texto só em português"));
-  });
+      for (const value of line.match(PLACEHOLDER) ?? []) {
+        if (TRANSLATION_MARKERS.has(value)) bump(translation, rel, value);
+        else if (!isTranslationFile) bump(content, rel, value);
+      }
+    });
 }
 
 const report = (title, bucket, hint) => {
-  const occurrences = [...bucket.values()].reduce(
-    (total, entry) => total + entry.count,
-    0,
-  );
-  console.log(
-    `\n${title} — ${occurrences} ocorrência(s) em ${bucket.size} arquivo(s)`,
-  );
-  if (hint) console.log(`  ${hint}`);
+  const occurrences = [...bucket.values()].reduce((total, entry) => total + entry.count, 0);
+  console.log(`\n${title} — ${occurrences} ocorrência(s) em ${bucket.size} arquivo(s)`);
+  console.log(`  ${hint}`);
   if (occurrences === 0) return;
 
-  for (const [file, entry] of [...bucket.entries()].sort(
-    (a, b) => b[1].count - a[1].count,
-  )) {
-    const values = [...entry.values].sort().join(" ");
-    console.log(`  ${String(entry.count).padStart(3)}  ${file}`);
-    console.log(`       ${values}`);
+  for (const [file, entry] of [...bucket.entries()].sort((a, b) => b[1].count - a[1].count)) {
+    console.log(`  ${String(entry.count).padStart(4)}  ${file}`);
+    console.log(`         ${[...entry.values].sort().join(" ")}`);
   }
 };
 
-report(
-  "Conteúdo pendente",
-  content,
-  "bloqueia publicação, não desenvolvimento",
-);
-report(
-  "Tradução pendente",
-  translation,
-  "resolve na etapa 13, com revisão humana",
-);
+report("Conteúdo pendente", content, "bloqueia publicação, não desenvolvimento");
+report("Tradução pendente", translation, "resolve na etapa 13, com revisão humana");
 
 const total =
   [...content.values()].reduce((sum, entry) => sum + entry.count, 0) +

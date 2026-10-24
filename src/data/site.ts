@@ -1,4 +1,4 @@
-import { DEFAULT_LOCALE, LOCALES, type Locale } from "./types";
+import { DEFAULT_LOCALE, LOCALES, type Locale } from "@/i18n/config";
 
 export interface SiteConfig {
   /** Nome curto usado em título de página e Open Graph. */

@@ -1,20 +1,189 @@
 {
-  "meta": {
-    "title": "Samantha Albuquerque",
-    "description": "Portafolio de Samantha Albuquerque, estudiante de Psicología con énfasis en neuropsicología."
+  "ui": {
+    "meta": {
+      "title": "Samantha Albuquerque",
+      "description": "Portafolio de Samantha Albuquerque, estudiante de Psicología con énfasis en neuropsicología."
+    },
+    "nav": {
+      "skipToContent": "Ir al contenido",
+      "language": "Idioma",
+      "theme": "Tema",
+      "themeSystem": "Sistema",
+      "themeLight": "Claro",
+      "themeDark": "Oscuro",
+      "themeChange": "Cambiar tema"
+    },
+    "footer": {
+      "location": "Maricá y Niterói, RJ, Brasil"
+    },
+    "placeholder": "En construcción"
   },
-  "nav": {
-    "skipToContent": "Ir al contenido",
-    "primary": "Navegación principal",
-    "language": "Idioma",
-    "theme": "Tema",
-    "themeSystem": "Sistema",
-    "themeLight": "Claro",
-    "themeDark": "Oscuro",
-    "themeChange": "Cambiar tema"
-  },
-  "footer": {
-    "location": "Maricá y Niterói, RJ, Brasil"
-  },
-  "placeholder": "En construcción"
+  "content": {
+    "profile": {
+      "headline": "[ES] Estudante de Psicologia (10º período) na UFF Niterói, com experiência em neuropsicologia clínica, avaliação psicológica, gestão de pessoas e análise do comportamento.",
+      "greeting": "[ES] Olá! Meu nome é",
+      "welcome": "[ES] Fico animada com a sua presença!",
+      "locationLine": "Maricá | Niterói"
+    },
+    "experiences": {
+      "graduacao-uff": {
+        "title": "[ES] Graduação em Psicologia",
+        "role": "[ES] Estudante de Psicologia (10º período)",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "seanp-uff": {
+        "title": "[ES] SEANP UFF",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "laenp-uff": {
+        "title": "[ES] LAENP UFF",
+        "role": "[ES] Vice-presidência",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "sarem-ii": {
+        "title": "[ES] SAREM II",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "sri-uff": {
+        "title": "[ES] SRI UFF",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "ieee": {
+        "title": "[ES] IEEE",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "aiesec": {
+        "title": "[ES] AIESEC",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "curso-de-ferias-neuropsicologia": {
+        "title": "[ES] Facilitação no Curso de Férias de Neuropsicologia",
+        "role": "[ES] Facilitadora",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "neuro-upc-huap": {
+        "title": "[ES] NeuroUPC — HUAP",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "pesquisa-e-publicacao": {
+        "title": "[ES] Projeto de pesquisa e publicação de artigos científicos",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "estagio-saude-do-trabalhador": {
+        "title": "[ES] Estágio em saúde do trabalhador",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]",
+          "[ES] [ATIVIDADE 2]"
+        ]
+      },
+      "seap-policia-penal": {
+        "title": "[ES] SEAP — Polícia Penal do Rio de Janeiro",
+        "role": "[ES] [CARGO]",
+        "summary": "[ES] [RESUMO]",
+        "activities": [
+          "[ES] [ATIVIDADE 1]"
+        ]
+      }
+    },
+    "instruments": {
+      "disclaimer": "[ES] Aplicação e correção sob supervisão, em contexto de formação.",
+      "levels": {
+        "applied-and-scored": "[ES] aplicado e corrigido",
+        "applied-only": "[ES] apenas aplicado"
+      },
+      "domains": {
+        "inteligencia": "[ES] Inteligência",
+        "memoria": "[ES] Memória",
+        "atencao-e-funcoes-executivas": "[ES] Atenção e funções executivas",
+        "linguagem-e-fala": "[ES] Linguagem e fala",
+        "personalidade-e-emocional": "[ES] Personalidade e aspectos emocionais",
+        "rastreio-e-demencia": "[ES] Rastreio e demência",
+        "social-e-desenvolvimento": "[ES] Cognição social e desenvolvimento",
+        "funcionalidade-e-sensorial": "[ES] Funcionalidade e sensorial",
+        "unclassified": "[ES] Outros instrumentos"
+      },
+      "notes": {
+        "bdefs": "[ES] versões longa e curta",
+        "neuupsilin": "[ES] bateria breve, cobre mais de um domínio",
+        "dominio-a-confirmar": "[ES] domínio a confirmar"
+      }
+    },
+    "skills": {
+      "documents": "[ES] Documentos psicológicos e registro documental conforme as resoluções do CFP, incluindo o laudo resultante das avaliações neuropsicológicas.",
+      "spreadsheets": "[ES] Criação de planilhas e dashboards automatizados, com tabelas dinâmicas e gráficos para uso recorrente.",
+      "canva": "[ES] Ferramenta usada na AIESEC e em apresentações acadêmicas.",
+      "languages": "[ES] A proficiência em inglês foi útil na atuação na SRI, sobretudo na comunicação com estudantes de mobilidade internacional.",
+      "spreadsheetFunctions": [
+        "FILTER",
+        "BUSCARV",
+        "BUSCARH",
+        "CONTAR.SI",
+        "CONTAR",
+        "CONCATENAR",
+        "INDICE",
+        "MAX",
+        "MIN"
+      ]
+    },
+    "certifications": {
+      "toefl-itp": {
+        "detail": "[ES] [NOTA E ANO]"
+      },
+      "excel-intermediario": {
+        "detail": "[ES] [INSTITUIÇÃO E ANO]"
+      },
+      "power-bi": {
+        "detail": "[ES] [INSTITUIÇÃO E ANO]"
+      }
+    }
+  }
 }

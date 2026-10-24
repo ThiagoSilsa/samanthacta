@@ -1,21 +1,15 @@
-import { untranslated } from "@/lib/localized";
-import type { Instrument, InstrumentDomain, Localized } from "./types";
+import type { Instrument, InstrumentDomain } from "./types";
 
 /**
  * Instrumentos psicométricos aplicados em contexto de formação.
  *
- * Duas decisões registradas:
- *
- * 1. **BIS-11 aparece uma vez.** A lista da cliente trazia o instrumento duas vezes; a
- *    segunda ocorrência é duplicata (P-009).
- * 2. **Agrupamento por domínio é proposta, não fato** (P-010). Os instrumentos que não
- *    tenho segurança de classificar estão em `unclassified` — e é melhor que fiquem lá do
- *    que num grupo errado, sugerindo domínio que a cliente não tem.
- *
- * Todo o conteúdo sobre instrumentos deve ser enquadrado na interface como *aplicação e
- * correção sob supervisão, em contexto de formação* (Resolução CFP nº 09/2018).
+ * - **BIS-11 aparece uma vez.** A lista da cliente trazia o instrumento duas vezes (P-009).
+ * - **Agrupamento por domínio é proposta, não fato** (P-010). O que não tenho segurança de
+ *   classificar está em `unclassified`.
+ * - Todo o conteúdo sobre instrumentos precisa ser enquadrado na interface como *aplicação
+ *   e correção sob supervisão, em contexto de formação* (Resolução CFP nº 09/2018) — o texto
+ *   está em `content.instruments.disclaimer`.
  */
-
 export const INSTRUMENTS: Instrument[] = [
   // inteligência
   { name: "WAIS-III", domain: "inteligencia", level: "applied-and-scored" },
@@ -42,21 +36,13 @@ export const INSTRUMENTS: Instrument[] = [
     domain: "atencao-e-funcoes-executivas",
     level: "applied-and-scored",
   },
-  {
-    name: "CPT",
-    domain: "atencao-e-funcoes-executivas",
-    level: "applied-and-scored",
-  },
+  { name: "CPT", domain: "atencao-e-funcoes-executivas", level: "applied-and-scored" },
   {
     name: "Stroop cor-palavra",
     domain: "atencao-e-funcoes-executivas",
     level: "applied-and-scored",
   },
-  {
-    name: "Hayling",
-    domain: "atencao-e-funcoes-executivas",
-    level: "applied-and-scored",
-  },
+  { name: "Hayling", domain: "atencao-e-funcoes-executivas", level: "applied-and-scored" },
   {
     name: "DEX — Questionário Disexecutivo",
     domain: "atencao-e-funcoes-executivas",
@@ -66,13 +52,9 @@ export const INSTRUMENTS: Instrument[] = [
     name: "BDEFS",
     domain: "atencao-e-funcoes-executivas",
     level: "applied-and-scored",
-    note: untranslated("versões longa e curta"),
+    noteKey: "bdefs",
   },
-  {
-    name: "DIVA-5",
-    domain: "atencao-e-funcoes-executivas",
-    level: "applied-and-scored",
-  },
+  { name: "DIVA-5", domain: "atencao-e-funcoes-executivas", level: "applied-and-scored" },
 
   // linguagem e fala
   {
@@ -87,18 +69,10 @@ export const INSTRUMENTS: Instrument[] = [
   },
 
   // personalidade e aspectos emocionais
-  {
-    name: "SCID",
-    domain: "personalidade-e-emocional",
-    level: "applied-and-scored",
-  },
+  { name: "SCID", domain: "personalidade-e-emocional", level: "applied-and-scored" },
   { name: "BFP", domain: "personalidade-e-emocional", level: "applied-only" },
   { name: "QUATI", domain: "personalidade-e-emocional", level: "applied-only" },
-  {
-    name: "BIS-11",
-    domain: "personalidade-e-emocional",
-    level: "applied-and-scored",
-  },
+  { name: "BIS-11", domain: "personalidade-e-emocional", level: "applied-and-scored" },
 
   // rastreio e demência
   {
@@ -114,21 +88,9 @@ export const INSTRUMENTS: Instrument[] = [
   { name: "BPA", domain: "rastreio-e-demencia", level: "applied-and-scored" },
 
   // social e desenvolvimento
-  {
-    name: "SRS-2",
-    domain: "social-e-desenvolvimento",
-    level: "applied-and-scored",
-  },
-  {
-    name: "PROTEA",
-    domain: "social-e-desenvolvimento",
-    level: "applied-and-scored",
-  },
-  {
-    name: "FAUX PAS",
-    domain: "social-e-desenvolvimento",
-    level: "applied-and-scored",
-  },
+  { name: "SRS-2", domain: "social-e-desenvolvimento", level: "applied-and-scored" },
+  { name: "PROTEA", domain: "social-e-desenvolvimento", level: "applied-and-scored" },
+  { name: "FAUX PAS", domain: "social-e-desenvolvimento", level: "applied-and-scored" },
 
   // funcionalidade e sensorial
   {
@@ -147,42 +109,27 @@ export const INSTRUMENTS: Instrument[] = [
     name: "NEUPSILIN",
     domain: "unclassified",
     level: "applied-and-scored",
-    note: untranslated("bateria breve, cobre mais de um domínio"),
+    noteKey: "neuupsilin",
   },
   {
     name: "IPHEXA",
     domain: "unclassified",
     level: "applied-and-scored",
-    note: untranslated("domínio a confirmar"),
+    noteKey: "dominio-a-confirmar",
   },
   {
     name: "TISD",
     domain: "unclassified",
     level: "applied-and-scored",
-    note: untranslated("domínio a confirmar"),
+    noteKey: "dominio-a-confirmar",
   },
   {
     name: "IHS-2",
     domain: "unclassified",
     level: "applied-and-scored",
-    note: untranslated("domínio a confirmar"),
+    noteKey: "dominio-a-confirmar",
   },
 ];
-
-/** Rótulos dos grupos. O texto vive aqui para a interface só ordenar. */
-export const INSTRUMENT_DOMAIN_LABELS: Record<InstrumentDomain, Localized> = {
-  inteligencia: untranslated("Inteligência"),
-  memoria: untranslated("Memória"),
-  "atencao-e-funcoes-executivas": untranslated("Atenção e funções executivas"),
-  "linguagem-e-fala": untranslated("Linguagem e fala"),
-  "personalidade-e-emocional": untranslated(
-    "Personalidade e aspectos emocionais",
-  ),
-  "rastreio-e-demencia": untranslated("Rastreio e demência"),
-  "social-e-desenvolvimento": untranslated("Cognição social e desenvolvimento"),
-  "funcionalidade-e-sensorial": untranslated("Funcionalidade e sensorial"),
-  unclassified: untranslated("Outros instrumentos"),
-};
 
 /** Ordem de exibição dos grupos. `unclassified` sempre por último. */
 export const INSTRUMENT_DOMAIN_ORDER: InstrumentDomain[] = [

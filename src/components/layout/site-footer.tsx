@@ -7,7 +7,7 @@ import { profile } from "@/data/profile";
  * Components bloqueia, e um ano fixo viraria mentira na virada do ano. "© Nome" é suficiente.
  */
 export function SiteFooter() {
-  const t = useTranslations("footer");
+  const t = useTranslations("ui.footer");
 
   return (
     <footer className="mt-auto border-t border-border">

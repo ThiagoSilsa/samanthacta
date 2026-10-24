@@ -18,7 +18,7 @@ type ThemeChoice = (typeof ORDER)[number];
  * render em cascata — e o lint do React 19 reclama disso, com razão.
  */
 export function ThemeToggle() {
-  const t = useTranslations("nav");
+  const t = useTranslations("ui.nav");
   const { theme, setTheme } = useTheme();
 
   const current: ThemeChoice = isChoice(theme) ? theme : "system";
