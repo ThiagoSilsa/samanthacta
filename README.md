@@ -9,9 +9,9 @@ página pública em português, inglês e espanhol, com tema claro e escuro.
 
 ## Status
 
-**Em construção.** Este repositório ainda não contém código de aplicação: por enquanto
-existem apenas a licença e este README. A fundação técnica — `package.json`, `src/`,
-configuração de Tailwind e estrutura de pastas — é criada na etapa 01.
+**Fundação técnica pronta** (etapa 01): Next.js 16, React 19, TypeScript em modo `strict`,
+Tailwind CSS 4, shadcn/ui inicializado e estrutura de pastas criada. A página inicial é um
+placeholder — o conteúdo entra nas etapas seguintes.
 
 A documentação do projeto (briefing, decisões, direção de arte e o plano dividido em etapas)
 não fica neste repositório: ela contém dados pessoais da titular e é mantida apenas no
@@ -19,21 +19,21 @@ ambiente local de desenvolvimento.
 
 ## Stack
 
-| Camada       | Escolha                          |
-| ------------ | -------------------------------- |
-| Framework    | Next.js (App Router)             |
-| Linguagem    | TypeScript                       |
-| Estilo       | Tailwind CSS                     |
-| Componentes  | shadcn/ui                        |
-| Idiomas      | `next-intl` (pt, en, es)         |
-| Tema         | `next-themes` (claro e escuro)   |
-| Deploy       | Vercel                           |
+| Camada      | Escolha                        |
+| ----------- | ------------------------------ |
+| Framework   | Next.js (App Router)           |
+| Linguagem   | TypeScript                     |
+| Estilo      | Tailwind CSS                   |
+| Componentes | shadcn/ui                      |
+| Idiomas     | `next-intl` (pt, en, es)       |
+| Tema        | `next-themes` (claro e escuro) |
+| Deploy      | Vercel                         |
 
 Nenhuma dependência é adicionada sem justificativa registrada na etapa correspondente.
 
 ## Como rodar
 
-Os comandos abaixo passam a valer a partir da etapa 01, quando o `package.json` existir.
+Requer Node.js 20 ou superior.
 
 ```bash
 npm install
@@ -41,6 +41,13 @@ npm run dev
 ```
 
 Depois, abrir `http://localhost:3000`.
+
+| Comando         | O que faz                 |
+| --------------- | ------------------------- |
+| `npm run dev`   | servidor de desenvolvimento |
+| `npm run build` | build de produção         |
+| `npm start`     | serve o build de produção |
+| `npm run lint`  | ESLint                    |
 
 ## Estrutura prevista
 
