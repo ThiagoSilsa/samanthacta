@@ -2,7 +2,11 @@
   "ui": {
     "meta": {
       "title": "Samantha Albuquerque",
-      "description": "Portfolio of Samantha Albuquerque, Psychology student with a focus on neuropsychology."
+      "description": "Portfolio of Samantha Albuquerque, Psychology student with a focus on neuropsychology.",
+      "jobTitle": "Psychology student",
+      "experiencesDescription": "Professional training path, with the activities of each experience.",
+      "experienceDescription": "Professional training experience: {title}.",
+      "skillsDescription": "Psychological documents, psychometric instruments, languages and tools."
     },
     "nav": {
       "skipToContent": "Skip to content",

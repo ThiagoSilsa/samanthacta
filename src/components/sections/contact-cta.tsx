@@ -25,7 +25,9 @@ export async function ContactCta() {
         {t("title")}
       </h2>
 
-      <p className="mx-auto mt-4 max-w-prose text-body text-muted-foreground">{t("body")}</p>
+      <p className="mx-auto mt-4 max-w-prose text-body text-muted-foreground">
+        {t("body")}
+      </p>
 
       <p className="mt-6">
         <a

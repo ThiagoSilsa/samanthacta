@@ -6,29 +6,52 @@ import { Source_Sans_3, Spectral } from "next/font/google";
 import { SiteFooter } from "@/components/layout/site-footer";
 import { SiteHeader } from "@/components/layout/site-header";
 import { ThemeProvider } from "@/components/layout/theme-provider";
+import { profile } from "@/data/profile";
+import { absoluteUrl, hasPublicUrl, site, siteUrl } from "@/data/site";
 import { HTML_LANG, type Locale } from "@/i18n/config";
 
 import "./globals.css";
 
+/*
+ * Só `latin`: português e espanhol usam Latin-1 (á, ã, ç, ñ), que já está nesse subset.
+ * `latin-ext` dobrava o número de arquivos de fonte sem nenhum caractere a mais para este
+ * conteúdo.
+ */
 const bodyFont = Source_Sans_3({
   variable: "--font-source-sans",
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   display: "swap",
 });
 
 const headingFont = Spectral({
   variable: "--font-spectral",
-  subsets: ["latin", "latin-ext"],
+  subsets: ["latin"],
   weight: ["400", "600"],
   display: "swap",
 });
 
 export async function generateMetadata(): Promise<Metadata> {
   const t = await getTranslations("ui.meta");
+  const locale = await getLocale();
 
   return {
-    title: t("title"),
+    metadataBase: siteUrl,
+    title: {
+      default: t("title"),
+      template: `%s — ${site.name}`,
+    },
     description: t("description"),
+    alternates: { canonical: "/" },
+    openGraph: {
+      type: "website",
+      siteName: site.name,
+      locale: HTML_LANG[(locale as Locale) ?? "pt"],
+      title: t("title"),
+      description: t("description"),
+      url: "/",
+    },
+    // Sem URL pública, nada de indexar: canonical e sitemap apontariam para localhost.
+    robots: hasPublicUrl ? undefined : { index: false, follow: false },
   };
 }
 
@@ -40,6 +63,7 @@ export default async function RootLayout({
   const locale = (await getLocale()) as Locale;
   const messages = await getMessages();
   const t = await getTranslations("ui.nav");
+  const metaT = await getTranslations("ui.meta");
 
   return (
     <html
@@ -70,6 +94,29 @@ export default async function RootLayout({
             <SiteFooter />
           </NextIntlClientProvider>
         </ThemeProvider>
+
+        {/*
+          Dados estruturados: só o que é verificável. Nada de `worksFor`, `hasCredential`
+          ou CRP — ela ainda não tem registro profissional, e o site não pode sugerir que
+          tenha (I-1).
+        */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "Person",
+              name: profile.name,
+              jobTitle: metaT("jobTitle"),
+              url: absoluteUrl("/"),
+              alumniOf: {
+                "@type": "CollegeOrUniversity",
+                name: site.affiliation,
+              },
+              knowsLanguage: ["pt-BR", "en", "es"],
+            }),
+          }}
+        />
       </body>
     </html>
   );

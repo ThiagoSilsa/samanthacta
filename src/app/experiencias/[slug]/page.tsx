@@ -1,5 +1,6 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
+import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 
 import { EXPERIENCES, findExperienceBySlug } from "@/data/experiences";
@@ -11,6 +12,27 @@ import { formatPeriod } from "@/lib/dates";
  */
 export function generateStaticParams() {
   return EXPERIENCES.map((experience) => ({ slug: experience.slug }));
+}
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}): Promise<Metadata> {
+  const { slug } = await params;
+  const experience = findExperienceBySlug(slug);
+  if (!experience) return {};
+
+  const t = await getTranslations();
+  const meta = await getTranslations("ui.meta");
+  const title = t(`content.experiences.${slug}.title`);
+
+  return {
+    title,
+    description: meta("experienceDescription", { title }),
+    alternates: { canonical: `/experiencias/${slug}` },
+    openGraph: { url: `/experiencias/${slug}` },
+  };
 }
 
 export default async function ExperiencePage({

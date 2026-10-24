@@ -1,8 +1,22 @@
 import { getLocale, getTranslations } from "next-intl/server";
 import Link from "next/link";
+import type { Metadata } from "next";
 
 import { ORDERED_EXPERIENCES } from "@/data/experiences";
 import { formatPeriod } from "@/lib/dates";
+
+export async function generateMetadata(): Promise<Metadata> {
+  const t = await getTranslations("ui.experiences");
+  const meta = await getTranslations("ui.meta");
+
+  return {
+    title: t("title"),
+    description: meta("experiencesDescription"),
+    alternates: { canonical: "/experiencias" },
+    openGraph: { url: "/experiencias" },
+  };
+}
+
 
 /**
  * Índice das experiências, separado em principais e outras — a mesma divisão da linha do

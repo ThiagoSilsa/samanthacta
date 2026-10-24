@@ -2,7 +2,11 @@
   "ui": {
     "meta": {
       "title": "Samantha Albuquerque",
-      "description": "Portafolio de Samantha Albuquerque, estudiante de Psicología con énfasis en neuropsicología."
+      "description": "Portafolio de Samantha Albuquerque, estudiante de Psicología con énfasis en neuropsicología.",
+      "jobTitle": "Estudiante de Psicología",
+      "experiencesDescription": "Trayectoria de formación profesional, con las actividades de cada experiencia.",
+      "experienceDescription": "Experiencia de formación profesional: {title}.",
+      "skillsDescription": "Documentos psicológicos, instrumentos psicométricos, idiomas y herramientas."
     },
     "nav": {
       "skipToContent": "Ir al contenido",
