@@ -8,7 +8,9 @@ import type { Experience } from "../types";
  */
 export const pesquisaEPublicacao: Experience = {
   slug: "pesquisa-e-publicacao",
-  title: untranslated("Projeto de pesquisa e publicação de artigos científicos"),
+  title: untranslated(
+    "Projeto de pesquisa e publicação de artigos científicos",
+  ),
   organization: "[INSTITUIÇÃO]",
   role: untranslated("[CARGO]"),
   kind: "outra",

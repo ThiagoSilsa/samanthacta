@@ -40,7 +40,8 @@ const walk = (dir) => {
   for (const entry of entries) {
     const full = join(dir, entry);
     if (statSync(full).isDirectory()) files.push(...walk(full));
-    else if (EXTENSIONS.has(full.slice(full.lastIndexOf(".")))) files.push(full);
+    else if (EXTENSIONS.has(full.slice(full.lastIndexOf("."))))
+      files.push(full);
   }
   return files;
 };
@@ -48,7 +49,11 @@ const walk = (dir) => {
 /** Comentário não renderiza, então não conta como pendência de conteúdo. */
 const isComment = (line) => {
   const trimmed = line.trimStart();
-  return trimmed.startsWith("//") || trimmed.startsWith("*") || trimmed.startsWith("/*");
+  return (
+    trimmed.startsWith("//") ||
+    trimmed.startsWith("*") ||
+    trimmed.startsWith("/*")
+  );
 };
 
 const content = new Map();
@@ -78,20 +83,35 @@ for (const file of walk(TARGET_DIR)) {
 }
 
 const report = (title, bucket, hint) => {
-  const occurrences = [...bucket.values()].reduce((total, entry) => total + entry.count, 0);
-  console.log(`\n${title} — ${occurrences} ocorrência(s) em ${bucket.size} arquivo(s)`);
+  const occurrences = [...bucket.values()].reduce(
+    (total, entry) => total + entry.count,
+    0,
+  );
+  console.log(
+    `\n${title} — ${occurrences} ocorrência(s) em ${bucket.size} arquivo(s)`,
+  );
   if (hint) console.log(`  ${hint}`);
   if (occurrences === 0) return;
 
-  for (const [file, entry] of [...bucket.entries()].sort((a, b) => b[1].count - a[1].count)) {
+  for (const [file, entry] of [...bucket.entries()].sort(
+    (a, b) => b[1].count - a[1].count,
+  )) {
     const values = [...entry.values].sort().join(" ");
     console.log(`  ${String(entry.count).padStart(3)}  ${file}`);
     console.log(`       ${values}`);
   }
 };
 
-report("Conteúdo pendente", content, "bloqueia publicação, não desenvolvimento");
-report("Tradução pendente", translation, "resolve na etapa 13, com revisão humana");
+report(
+  "Conteúdo pendente",
+  content,
+  "bloqueia publicação, não desenvolvimento",
+);
+report(
+  "Tradução pendente",
+  translation,
+  "resolve na etapa 13, com revisão humana",
+);
 
 const total =
   [...content.values()].reduce((sum, entry) => sum + entry.count, 0) +

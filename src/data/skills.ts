@@ -20,9 +20,39 @@ export const CFP_RESOLUTIONS: string[] = [
  * detalhe de tradução.
  */
 export const SPREADSHEET_FUNCTIONS = {
-  pt: ["FILTER", "PROCV", "PROCH", "CONT.SE", "CONT.VALORES", "CONCATENAR", "ÍNDICE", "MÁXIMO", "MÍNIMO"],
-  en: ["FILTER", "VLOOKUP", "HLOOKUP", "COUNTIF", "COUNTA", "CONCATENATE", "INDEX", "MAX", "MIN"],
-  es: ["FILTER", "BUSCARV", "BUSCARH", "CONTAR.SI", "CONTAR", "CONCATENAR", "INDICE", "MAX", "MIN"],
+  pt: [
+    "FILTER",
+    "PROCV",
+    "PROCH",
+    "CONT.SE",
+    "CONT.VALORES",
+    "CONCATENAR",
+    "ÍNDICE",
+    "MÁXIMO",
+    "MÍNIMO",
+  ],
+  en: [
+    "FILTER",
+    "VLOOKUP",
+    "HLOOKUP",
+    "COUNTIF",
+    "COUNTA",
+    "CONCATENATE",
+    "INDEX",
+    "MAX",
+    "MIN",
+  ],
+  es: [
+    "FILTER",
+    "BUSCARV",
+    "BUSCARH",
+    "CONTAR.SI",
+    "CONTAR",
+    "CONCATENAR",
+    "INDICE",
+    "MAX",
+    "MIN",
+  ],
 } as const;
 
 export const CERTIFICATIONS: Certification[] = [
