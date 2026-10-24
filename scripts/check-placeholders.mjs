@@ -79,7 +79,8 @@ for (const file of walk(TARGET_DIR)) {
         else {
           bump(content, rel, value);
           if (locale) {
-            if (!tokensByLocale.has(locale)) tokensByLocale.set(locale, new Set());
+            if (!tokensByLocale.has(locale))
+              tokensByLocale.set(locale, new Set());
             tokensByLocale.get(locale).add(value);
           }
         }
@@ -136,7 +137,9 @@ for (const locale of ["en", "es"]) {
  */
 const keyPaths = (value, prefix = "") => {
   if (Array.isArray(value))
-    return value.flatMap((item, index) => keyPaths(item, `${prefix}[${index}]`));
+    return value.flatMap((item, index) =>
+      keyPaths(item, `${prefix}[${index}]`),
+    );
   if (value && typeof value === "object")
     return Object.entries(value).flatMap(([key, child]) =>
       keyPaths(child, prefix ? `${prefix}.${key}` : key),
